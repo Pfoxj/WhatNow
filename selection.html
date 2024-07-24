@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select a Part Of Our Site!</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f7ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .button {
+            display: inline-block;
+            width: 273px;
+            height: 253px;
+            text-indent: -9999px;
+            border: 2px solid transparent;
+            transition: border-color 0.3s ease;
+            cursor: pointer;
+        }
+        .button-balloon {
+            background-image: url('the-balloon-show-preview.png');
+        }
+        .button-what {
+            background-image: url('what.png');
+        }
+        .button:hover {
+            border-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>SELECTION!</h1>
+    <div class="button-container">
+        <a href="the-balloon-show-preview.html" class="button button-balloon">Balloon Show</a>
+        <a href="what.html" class="button button-what">What!?!</a>
+    </div>
+    <script>
+        document.querySelectorAll('.button').forEach(button => {
+            button.addEventListener('click', function() {
+                alert(`You are about to view the ${this.textContent} animation!`);
+            });
+        });
+    </script>
+</body>
+</html>

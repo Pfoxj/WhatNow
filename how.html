@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How!?!</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        iframe {
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            transition: border-color 0.3s ease;
+        }
+        iframe:hover {
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>How!?!</h1>
+    <iframe src="how-animation.html" allowtransparency="true" width="800" height="600" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    <script>
+        document.querySelector('iframe').addEventListener('mouseover', function() {
+            this.style.borderColor = '#ff0000';
+        });
+        document.querySelector('iframe').addEventListener('mouseout', function() {
+            this.style.borderColor = '#007bff';
+        });
+    </script>
+</body>
+</html>
